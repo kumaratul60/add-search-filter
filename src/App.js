@@ -1,23 +1,17 @@
-import logo from './logo.svg';
+
 import './App.css';
+import EfficientSearch from './EfficientSearch';
+import NaiveSearch2 from './NaiveSearch2';
+import NaiveSerach1 from './NaiveSerach1';
 
 function App() {
+ 
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     {/* <NaiveSerach1/> */}
+     {/* <NaiveSearch2/> */}
+     <EfficientSearch/>
     </div>
   );
 }
