@@ -26,6 +26,14 @@ const NaiveSerach1 = () => {
         inputRef.current.value = "";
     }
 
+    // onclick listed todo the clicked todo deleted
+    
+  const handleDelete = (id) => {
+    const removeItem = [...items];
+    removeItem.splice(id, 1);
+    setItems(removeItem);
+  };
+
     return (
         <div className="App">
             <label htmlFor="searchInput"> Search</label>
@@ -44,7 +52,7 @@ const NaiveSerach1 = () => {
             </form>
             <h3>Items:</h3>
             { items.map((itemElement, index) => (
-                <div key={ index }>{ itemElement }</div>
+                <div key={ index } onClick = {()=> handleDelete(index)}>{ itemElement }</div>
             )) }
         </div>
     );
